@@ -1,0 +1,25 @@
+{
+  "name": "databib",
+  "version": "0.0.1",
+  "description": "If only the data from the Dutch bibliotheek websites was available in raw formats!",
+  "main": "databib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giacecco/databib.git"
+  },
+  "author": "Gianfranco Cecconi <giacecco@giacecco.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giacecco/databib/issues"
+  },
+  "homepage": "https://github.com/giacecco/databib#readme",
+  "dependencies": {
+    "async": "^3.0.1",
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0",
+    "underscore": "^1.9.1"
+  }
+}
