@@ -108,8 +108,17 @@ let getAudiobooks = callback => {
 getEbooks(true, (err, results) => {
     console.log(JSON.stringify(results));
 });
-*/
 
 getAudiobooks((err, books) => {
     console.log(JSON.stringify(books));
 })
+*/
+
+const fs = require('fs');
+let ebooks = JSON.parse(fs.readFileSync('eboeken.json'));
+let audiobooks = JSON.parse(fs.readFileSync('luisterboeken.json'));
+let audiobooksTitles = audiobooks.map(x => x.title);
+console.log(ebooks
+    .filter(x => _.contains(audiobooksTitles, x.title))
+    .map(x => '"' + x.authors.join(', ') + '","' + x.title + '",' + x.categoryUrl)
+    .join('\r\n'));
